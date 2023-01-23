@@ -1,8 +1,9 @@
 package com.example.coursjava;
 
-public class Violinist implements Musician {
+public class Pianist implements Musician{
     @Override
     public String playYourPartition() {
-        return "I played a string melody";
+        return "I played a piano melody";
     }
+
 }

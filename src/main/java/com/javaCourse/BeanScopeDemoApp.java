@@ -2,7 +2,6 @@ package com.javaCourse;
 
 import com.javaCourse.services.Musician;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class BeanScopeDemoApp {
     public static void main(String[] args) {
 

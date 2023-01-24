@@ -1,6 +1,6 @@
 package com.javaCourse;
 
-import com.javaCourse.services.Musician;
+import com.javaCourse.servicesImplementation.Guitarist;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AutowireDemoApp {
@@ -10,13 +10,10 @@ public class AutowireDemoApp {
         ClassPathXmlApplicationContext("applicationContext.xml");
 
         // Retrieve bean from the spring container
-        Musician musician = context.getBean("guitarist", Musician.class);
+        Guitarist musician = context.getBean("guitarist", Guitarist.class);
 
-        // Call a method on the bean
-        System.out.println(musician.playYourPartition());
-
-        // Use the DI
-        System.out.println(musician.getPrepa());
+        System.out.println(musician.getEmail());
+        System.out.println(musician.getSite());
 
         // Close the App context
         context.close();

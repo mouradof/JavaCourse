@@ -1,10 +1,19 @@
 package com.javaCourse.servicesImplementation;
 
 import com.javaCourse.services.Musician;
+import com.javaCourse.services.PrepareService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("Banda Taurina")
+@Component
 public class Guitarist implements Musician {
+
+    private final PrepareService prepareService;
+
+    @Autowired
+    public Guitarist(PrepareService prepareService) {
+        this.prepareService = prepareService;
+    }
     @Override
     public String playYourPartition(){
         return "the spanish guitar";
@@ -12,6 +21,6 @@ public class Guitarist implements Musician {
 
     @Override
     public String getPrepa() {
-        return null;
+        return prepareService.getPreparation();
     }
 }

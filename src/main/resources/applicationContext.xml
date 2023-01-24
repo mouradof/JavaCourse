@@ -14,7 +14,7 @@
         <constructor-arg ref="onePrepareService"/>
     </bean>
 
-    <bean id="oneMusician" class="com.javaCourse.servicesImplementation.BassPlayer" scope="prototype">
+    <bean id="guitarist" class="com.javaCourse.servicesImplementation.BassPlayer" scope="prototype">
         <constructor-arg ref="onePrepareService"/>
     </bean>
 </beans>

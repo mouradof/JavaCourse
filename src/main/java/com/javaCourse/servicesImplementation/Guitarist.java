@@ -7,18 +7,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Guitarist implements Musician {
-
-    private final PrepareService prepareService;
-
+    private PrepareService prepareService;
     @Autowired
-    public Guitarist(PrepareService prepareService) {
+    public void setPrepareService(PrepareService prepareService) {
         this.prepareService = prepareService;
     }
     @Override
     public String playYourPartition(){
         return "the spanish guitar";
     }
-
     @Override
     public String getPrepa() {
         return prepareService.getPreparation();

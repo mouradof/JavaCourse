@@ -1,5 +1,6 @@
 package com.javaCourse;
 
+import com.javaCourse.services.Musician;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyApp {
@@ -9,11 +10,14 @@ public class MyApp {
         ClassPathXmlApplicationContext context =  new
         ClassPathXmlApplicationContext("applicationContext.xml");
 
-        // Retrieve a bean from the spring container
-        Musician musician = context.getBean("myMusician", Musician.class);
+        // Retrieve bean from the spring container
+        Musician musician = context.getBean("oneBassPlayer", Musician.class);
 
         // Call a method on the bean
         System.out.println(musician.playYourPartition());
+
+        // Use the DI
+        System.out.println(musician.getPrepa());
 
         // Close the App context
         context.close();

@@ -5,5 +5,13 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myMusician" class="com.javaCourse.Pianist"/>
+    <bean id="onePrepareService" class="com.javaCourse.servicesImplementation.ZenPreparationService"/>
+
+    <bean id="oneBassPlayer" class="com.javaCourse.servicesImplementation.BassPlayer">
+        <constructor-arg ref="onePrepareService"/>
+    </bean>
+
+    <bean id="oneMusician" class="com.javaCourse.servicesImplementation.BassPlayer" scope="prototype">
+        <constructor-arg ref="onePrepareService"/>
+    </bean>
 </beans>

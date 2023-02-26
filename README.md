@@ -1,2 +1,1 @@
-# JavaCourse
-# JavaCourse
+# CESI JavaCourse
